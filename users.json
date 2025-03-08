@@ -1,0 +1,72 @@
+[
+    {
+        "username": "admin",
+        "password": "admin123",
+        "role": "admin",
+        "blocked": false,
+        "block_reason": ""
+    },
+    {
+        "username": "user1",
+        "password": "user123",
+        "role": "user",
+        "blocked": false,
+        "block_reason": ""
+    },
+    {
+        "username": "user2",
+        "password": "user123",
+        "role": "user",
+        "blocked": true,
+        "block_reason": "Vi ph\u1ea1m quy \u0111\u1ecbnh"
+    },
+    {
+        "username": "user3",
+        "password": "user123",
+        "role": "user",
+        "blocked": false,
+        "block_reason": ""
+    },
+    {
+        "username": "user4",
+        "password": "user123",
+        "role": "user",
+        "blocked": false,
+        "block_reason": ""
+    },
+    {
+        "username": "user",
+        "password": "123",
+        "role": "user",
+        "blocked": false,
+        "block_reason": ""
+    },
+    {
+        "username": "huhu",
+        "password": "newpassword123",
+        "role": "user",
+        "blocked": false,
+        "block_reason": ""
+    },
+    {
+        "username": "hihi",
+        "password": "123",
+        "role": "user",
+        "blocked": true,
+        "block_reason": "Vi ph\u1ea1m quy \u0111\u1ecbnh"
+    },
+    {
+        "username": "user123",
+        "password": "123",
+        "role": "user",
+        "blocked": false,
+        "block_reason": ""
+    },
+    {
+        "username": "phin158",
+        "password": "vy123",
+        "role": "user",
+        "blocked": false,
+        "block_reason": ""
+    }
+]
