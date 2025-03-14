@@ -1,28 +1,43 @@
-# Flask Tiny App 🚀
+# Phát triển ứng dụng
 
-## 📌 Thông tin cá nhân  
+##  Thông tin cá nhân  
 - **Họ tên**: Nguyễn Thanh Tường Vy  
 - **Mã sinh viên**: 22708841
-- **Họ tên**: Phạm Thanh Thảo  
-- **Mã sinh viên**: 22695701
+
 ---
 
 ## 📌 Mô tả project  
-Flask Tiny App là một ứng dụng web đơn giản xây dựng bằng Flask.  
-Ứng dụng hỗ trợ:
-- **Blog**: Cho phép người dùng viết bài, chỉnh sửa, xóa bài viết.  
+Project giữa kỳ của em là một ứng dụng web xây dựng bằng **Flask**.  
+Ứng dụng hỗ trợ các chức năng chính sau:
 
-Ứng dụng sẽ được phát triển qua các phiên bản với tính năng mở rộng như:  
-✅ **Push mã nguồn project có sẵn lên** (Release v1)  
-✅ **Đăng nhập / Đăng ký** (Release v2)  
-✅ **Trang Admin quản lý user** (Release v3)  
-✅ **Xóa nhiều bài viết cùng lúc** (Release v4)  
-✅ **Phân trang (pagination)** (Release v5)  
-✅ **Đóng gói với Docker** (Final Release)  
+### 🚀 Chức năng chính  
+- **Blog**: Cho phép người dùng viết bài, chỉnh sửa, xóa bài viết.  
+- **Hệ thống bình luận**: Người dùng có thể bình luận dưới mỗi bài viết.  
+
+## 🔑 Phân quyền người dùng  
+
+Hệ thống hỗ trợ 3 loại quyền người dùng chính:
+
+| Vai trò         | Xem | Chỉnh sửa | Xóa |  
+|---------------|:--:|:---------:|:--:|  
+| **Viewer**       | ✅ | ❌ | ❌ |  
+| **Collaborator** | ✅ | ✅ | ❌ |  
+| **Editor**       | ✅ | ✅ | ✅ |  
+
+### 🎯 Mô tả chi tiết  
+- **Viewer**: Chỉ có thể xem nội dung, không thể chỉnh sửa hoặc xóa.  
+- **Collaborator**: Có thể xem và chỉnh sửa nội dung, nhưng không thể xóa.  
+- **Editor**: Có toàn quyền xem, chỉnh sửa và xóa nội dung.  
+  
+  - **Quản trị viên**: Quản lý tất cả bài viết và người dùng.  
+- **Hệ thống đăng nhập/đăng ký**: Xác thực bằng **Flask-Login**.  
+- **Quản lý danh mục**: Phân loại bài viết theo danh mục.  
+- **Giao diện thân thiện**: Xây dựng với **Jinja2 + Bootstrap**.    
+
 
 ---
 
-## 📌 Hướng dẫn cài đặt 🔧
+## Hướng dẫn cài đặt 🔧
 
 ### **1️⃣ Yêu cầu hệ thống**  
 Trước khi chạy project, hãy đảm bảo bạn đã cài đặt:  
