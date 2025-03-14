@@ -24,12 +24,7 @@ Hệ thống hỗ trợ 3 loại quyền người dùng chính:
 | **Collaborator** | ✅ | ✅ | ❌ |  
 | **Editor**       | ✅ | ✅ | ✅ |  
 
-### 🎯 Mô tả chi tiết  
-- **Viewer**: Chỉ có thể xem nội dung, không thể chỉnh sửa hoặc xóa.  
-- **Collaborator**: Có thể xem và chỉnh sửa nội dung, nhưng không thể xóa.  
-- **Editor**: Có toàn quyền xem, chỉnh sửa và xóa nội dung.  
-  
-  - **Quản trị viên**: Quản lý tất cả bài viết và người dùng.  
+- **Quản trị viên**: Quản lý tất cả bài viết và người dùng.  
 - **Hệ thống đăng nhập/đăng ký**: Xác thực bằng **Flask-Login**.  
 - **Quản lý danh mục**: Phân loại bài viết theo danh mục.  
 - **Giao diện thân thiện**: Xây dựng với **Jinja2 + Bootstrap**.    
