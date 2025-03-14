@@ -11,6 +11,17 @@
             <label for="content" class="form-label">Nội dung</label>
             <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
         </div>
+
+        <!-- CHỌN DANH MỤC -->
+        <div class="mb-3">
+            <label for="category_id" class="form-label">Danh mục</label>
+            <select class="form-select" id="category_id" name="category_id" required>
+                {% for cat in categories %}
+                    <option value="{{ cat.id }}">{{ cat.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
         <button type="submit" class="btn btn-primary">Gửi bài viết</button>
     </form>
 {% endblock %}

@@ -14,7 +14,7 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 
 :: Step 5: Run the application (uncomment if needed)
-:: python app.py
+python app.py
 
 echo Setup complete!
 pause

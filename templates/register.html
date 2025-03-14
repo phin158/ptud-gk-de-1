@@ -11,6 +11,21 @@
             <label for="password" class="form-label">Mật khẩu</label>
             <input type="password" class="form-control w-25" id="password" name="password" required>
         </div>
+        <div class="mb-3">
+            <label for="confirm_password" class="form-label">Xác nhận mật khẩu</label>
+            <input type="password" class="form-control w-25" id="confirm_password" name="confirm_password" required>
+        </div>
+
+        <!-- CHỌN ROLE -->
+        <div class="mb-3">
+            <label for="role" class="form-label">Loại tài khoản</label>
+            <select class="form-select w-25" id="role" name="role">
+                <option value="viewer">Viewer (chỉ xem)</option>
+                <option value="collaborator">Collaborator (xem, sửa)</option>
+                <option value="editor">Editor (xem, sửa, xóa)</option>
+            </select>
+        </div>
+
         <button type="submit" class="btn btn-primary">Đăng ký</button>
     </form>
 {% endblock %}

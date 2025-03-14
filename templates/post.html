@@ -4,5 +4,24 @@
     <h1>{{ post.title }}</h1>
     <p><small>Tác giả: {{ post.author }} | {{ post.date }}</small></p>
     <p>{{ post.content }}</p>
-    <a href="{{ url_for('index') }}" class="btn btn-secondary">Quay lại</a>
+
+    <!-- Hiển thị danh sách bình luận -->
+    <h4>Bình luận:</h4>
+    {% for cmt in comments %}
+        <div>
+            <strong>{{ cmt.user.username }}</strong> ({{ cmt.date }})
+            <p>{{ cmt.content }}</p>
+        </div>
+    {% endfor %}
+
+    <!-- Form thêm bình luận -->
+    <form method="POST">
+        <div class="mb-3">
+            <label for="comment" class="form-label">Viết bình luận</label>
+            <textarea class="form-control" id="comment" name="comment" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Gửi bình luận</button>
+    </form>
+
+    <a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">Quay lại</a>
 {% endblock %}

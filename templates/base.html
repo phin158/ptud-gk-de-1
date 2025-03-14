@@ -16,14 +16,16 @@
                 </a>
                 <div class="navbar-nav">
                     <a class="nav-link" href="{{ url_for('index') }}">Trang chủ</a>
-                    {% if session.user %}
+                    {% if current_user() %}
                         <a class="nav-link" href="{{ url_for('create_post') }}">Tạo bài viết</a>
                         <a class="nav-link" href="{{ url_for('my_posts') }}">Bài viết của tôi</a>
-                        {% if session.user.role == 'admin' %}
-                            <a class="nav-link" href="{{ url_for('admin') }}">Quản lý bài viết</a>
+                        {% if current_user().role == 'admin' %}
+                            <a class="nav-link" href="{{ url_for('admin_panel') }}">Quản lý bài viết</a>
                             <a class="nav-link" href="{{ url_for('admin_users') }}">Quản lý người dùng</a>
                         {% endif %}
-                        <a class="nav-link" href="{{ url_for('logout') }}">Đăng xuất ({{ session.user.username }})</a>
+                        <a class="nav-link" href="{{ url_for('logout') }}">
+                            Đăng xuất ({{ current_user().username }})
+                        </a>
                     {% else %}
                         <a class="nav-link" href="{{ url_for('login') }}">Đăng nhập</a>
                         <a class="nav-link" href="{{ url_for('register') }}">Đăng ký</a>
@@ -33,26 +35,45 @@
         </nav>
 
         <div class="container mt-4">
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        <div class="alert alert-{{ category }}" role="alert">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
-            {% block content %}{% endblock %}
-        </div>
-    </div> 
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-3">
+                    <div class="sidebar">
+                        <h5>Danh mục</h5>
+                        <ul class="list-group">
+                            {% for cat in all_categories %}
+                                <li class="list-group-item">
+                                    <a href="{{ url_for('show_category', cat_id=cat.id) }}">
+                                        {{ cat.name }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
 
+                <!-- Nội dung chính -->
+                <div class="col-md-9">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }}" role="alert">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>Copyright © 2025 - Created by Thảo and Vy</p>
+                <p>Copyright © 2025 - Created by Vy</p>
             </div>
         </div>
     </footer>
-    
 </body>
 </html>

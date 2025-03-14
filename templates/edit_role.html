@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Sửa role cho {{ target_user.username }}</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label for="role" class="form-label">Chọn vai trò</label>
+        <select class="form-select w-25" id="role" name="role">
+            <option value="viewer" {% if target_user.role == 'viewer' %}selected{% endif %}>Viewer</option>
+            <option value="collaborator" {% if target_user.role == 'collaborator' %}selected{% endif %}>Collaborator</option>
+            <option value="editor" {% if target_user.role == 'editor' %}selected{% endif %}>Editor</option>
+            <option value="admin" {% if target_user.role == 'admin' %}selected{% endif %}>Admin</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+</form>
+{% endblock %}
