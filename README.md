@@ -44,7 +44,7 @@ Trước khi chạy project, hãy đảm bảo bạn đã cài đặt:
 **Bước 1: Clone repo từ GitHub**  
 ```bash
 git clone https://github.com/phin158/ptud-gk-de-1.git
-cd flask-tiny-app
+cd ptud-gk-de-1
 ```
 **Bước 2: Tạo môi trường ảo và cài đặt dependencies**  
 ```bash
