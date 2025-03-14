@@ -50,6 +50,7 @@ cd ptud-gk-de-1
 ```bash
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
+python.exe -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 **Bước 3: Chạy ứng dụng**
